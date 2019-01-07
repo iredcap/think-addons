@@ -1,13 +1,25 @@
 <?php
+/**
+ *  +----------------------------------------------------------------------
+ *  | 草帽支付系统 [ WE CAN DO IT JUST THINK ]
+ *  +----------------------------------------------------------------------
+ *  | Copyright (c) 2018 http://www.iredcap.cn All rights reserved.
+ *  +----------------------------------------------------------------------
+ *  | Licensed ( https://www.apache.org/licenses/LICENSE-2.0 )
+ *  +----------------------------------------------------------------------
+ *  | Author: Brian Waring <BrianWaring98@gmail.com>
+ *  +----------------------------------------------------------------------
+ */
 
 use think\Loader;
 use think\facade\Env;
 use think\facade\Hook;
 use think\facade\Route;
 
+// 定义插件目录
 define('ADDON_PATH', Env::get('root_path') . DIRECTORY_SEPARATOR . 'addons' .DIRECTORY_SEPARATOR);
 
-// 定义路由
+// 定义插件路由
 Route::any('addons/:route', "\\think\\addons\\Route@execute");
 
 // 如果插件目录不存在则创建
@@ -15,7 +27,7 @@ if (! is_dir(ADDON_PATH)) {
     @mkdir(ADDON_PATH, 0777, true);
 }
 
-// 注册类的根命名空间
+// 注册插件类的根命名空间
 Loader::addNamespace('addons', ADDON_PATH);
 
 /**

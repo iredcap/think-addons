@@ -12,22 +12,39 @@ abstract class Addons
     /**
      * 视图实例对象
      *
-     * @var view
+     * @var object view
      * @access protected
      */
     private $view = null;
 
-    // 当前错误信息
+    /**
+     * @var string 当前错误信息
+     */
     protected $error;
 
+    /**
+     * @var object Request
+     */
     protected $request;
 
+    /**
+     * @var object App
+     */
     protected $app;
 
+    /**
+     * @var array 插件信息
+     */
     public $info = [];
 
+    /**
+     * @var string 插件路径
+     */
     public $addons_path = '';
 
+    /**
+     * @var string 配置文件
+     */
     public $config_file = '';
 
     /**
