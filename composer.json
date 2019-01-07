@@ -1,19 +1,23 @@
 {
     "name": "iredcap/think-addons",
-    "description": "Thinkphp 5.1 Addons Library",
-    "type": "think-extend",
+    "description": "hinkphp 5.1 Addons Library",
+    "homepage": "https://github.com/iredcap/think-addons",
     "license": "Apache-2.0",
-    "version": "1.0",
+    "minimum-stability": "dev",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Brian Waring",
             "email": "brianwaring98@gmail.com"
         }
     ],
+    "support": {
+        "issues": "https://github.com/iredcap/think-addons/issues"
+    },
     "require": {
         "php": ">=5.6.0",
-        "topthink/think-installer": ">=1.0.10",
-        "topthink/think-helper": "^1.0"
+        "topthink/think-helper": ">=1.0.4",
+        "topthink/think-installer": ">=1.0.10"
     },
     "autoload": {
         "psr-4": {
