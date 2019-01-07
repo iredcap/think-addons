@@ -1,0 +1,26 @@
+{
+    "name": "iredcap/think-addons",
+    "description": "Thinkphp 5.1 Addons Library",
+    "type": "think-extend",
+    "license": "Apache-2.0",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "Brian Waring",
+            "email": "brianwaring98@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "topthink/think-installer": ">=1.0.10",
+        "topthink/think-helper": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "think\\": "src/"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    }
+}
